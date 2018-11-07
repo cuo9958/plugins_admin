@@ -8,8 +8,10 @@ import User from "../plugin/user/page"
 
 ReactDOM.render(
     <BrowserRouter>
-        <Route exact path="/" component={App} />
-        <Route path="/user" component={User} />
+        <div>
+            <Route exact path="/" component={App} />
+            <Route path="/user" component={User} />
+        </div>
     </BrowserRouter>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
