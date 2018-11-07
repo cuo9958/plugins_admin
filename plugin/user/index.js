@@ -9,11 +9,6 @@
 const Sequelize = require('sequelize');
 const route = require("./route");
 
-function middleware(ctx, next) {
-    console.log("用户")
-    next();
-}
-
 const model = {
     id: {
         type: Sequelize.INTEGER,
@@ -22,8 +17,6 @@ const model = {
 }
 
 module.exports = function (app) {
-    //中间件
-    app.use(middleware);
     //数据对象
     app.addModel("t_user", model, {
         freezeTableName: true,

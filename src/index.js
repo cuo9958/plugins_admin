@@ -4,10 +4,12 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Route, Link } from 'react-router-dom'
+import User from "../plugin/user/page"
 
 ReactDOM.render(
     <BrowserRouter>
         <Route exact path="/" component={App} />
+        <Route path="/user" component={User} />
     </BrowserRouter>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

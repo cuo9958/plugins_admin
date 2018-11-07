@@ -4,18 +4,17 @@
     "private": true,
     "dependencies": {
         "antd": "^3.10.4",
-        "babel-plugin-import": "^1.11.0",
         "config": "^2.0.1",
         "koa": "^2.6.1",
         "koa-body": "^4.0.4",
         "koa-router": "^7.4.0",
         "koa-static": "^5.0.0",
+        "less": "^3.8.1",
+        "less-loader": "^4.1.0",
         "log4js": "^3.0.6",
         "mysql2": "^1.6.3",
         "nprogress": "^0.2.0",
         "react": "^16.6.0",
-        "react-app-rewire-less": "^2.1.3",
-        "react-app-rewired": "^1.6.2",
         "react-dom": "^16.6.0",
         "react-router-dom": "^4.3.1",
         "react-scripts": "2.1.1",
@@ -41,6 +40,10 @@
     "devDependencies": {
         "@types/antd": "^1.0.0",
         "@types/react": "^16.4.18",
-        "nodemon": "^1.18.6"
-    }
+        "nodemon": "^1.18.6",
+        "babel-plugin-import": "^1.11.0",
+        "react-app-rewire-less": "^2.1.3",
+        "react-app-rewired": "^1.6.2"
+    },
+    "proxy": "http://localhost:18095"
 }
