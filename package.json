@@ -84,7 +84,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@types/antd": "^1.0.0",
     "@types/react": "^16.4.18",
     "nodemon": "^1.18.6",
     "babel-plugin-import": "^1.11.0",
