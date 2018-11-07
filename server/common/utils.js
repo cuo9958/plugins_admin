@@ -28,7 +28,7 @@ module.exports = {
         try {
             file_list.forEach(item => fn(item));
         } catch (error) {
-            Logger.info(error.message);
+            Logger.warm(error.message);
         }
     },
     /**
@@ -45,7 +45,7 @@ module.exports = {
         try {
             file_list.forEach(item => fn(require(dir_path + "/" + item)));
         } catch (error) {
-            Logger.info(error.message);
+            Logger.warm(error.message);
         }
     }
 }

@@ -8,6 +8,7 @@ const KoaBody = require("koa-body");
 const Logger = require("./common/Logger");
 const configs = require("./common/configs");
 const utils = require("./common/utils");
+const db = require("./common/db");
 
 const app = new Koa();
 const port = configs.port || 3000;
@@ -22,9 +23,25 @@ app.use(server(configs.root + "/build"));
 app.use(KoaBody(configs.body));
 
 /**
+ * 添加自定义对象
+ */
+app.plugins = [];
+global.models = {};
+
+//添加model
+app.addModel = function (name, model, opt = {}) {
+    const result = db.define(name, model, opt);
+    global.models[name] = result;
+}
+//添加菜单
+app.addMenu = function () {
+
+}
+
+/**
  * 加载插件
  */
-utils.loadModel(configs.root + "/plugin", item => app.use(item));
+utils.loadModel(configs.root + "/plugin", item => item(app, configs));
 /**
  * 添加路由
  */
