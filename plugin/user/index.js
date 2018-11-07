@@ -29,11 +29,12 @@ module.exports = function (app) {
         freezeTableName: true,
         timestamps: false,
     });
-    //路由
-    app.use(route.routes()).use(route.allowedMethods());
     //菜单
     app.addMenu([{
-        name: "user/page.js",
+        name: "user/page",
+        path: "user/page",
         txt: "显示名称",
     }]);
+    //路由
+    app.use(route.routes()).use(route.allowedMethods());
 }

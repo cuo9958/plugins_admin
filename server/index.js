@@ -27,6 +27,7 @@ app.use(KoaBody(configs.body));
  */
 app.plugins = [];
 global.models = {};
+global.menus = [];
 
 //添加model
 app.addModel = function (name, model, opt = {}) {
@@ -34,8 +35,8 @@ app.addModel = function (name, model, opt = {}) {
     global.models[name] = result;
 }
 //添加菜单
-app.addMenu = function () {
-
+app.addMenu = function (list) {
+    global.menus.push(...list);
 }
 
 /**
