@@ -42,11 +42,11 @@ app.addMenu = function (list) {
 /**
  * 加载插件
  */
-utils.loadModel(configs.root + "/plugin", item => item(app, configs));
+utils.loadModule(configs.root + "/plugin", item => item(app, configs));
 /**
  * 添加路由
  */
-utils.loadModel(configs.root + "/server/api", api_item => app.use(api_item.routes()).use(api_item.allowedMethods()));
+utils.loadModule(configs.root + "/server/api", api_item => app.use(api_item.routes()).use(api_item.allowedMethods()));
 /**
  * 错误处理页
  */
@@ -79,11 +79,11 @@ process.on('SIGINT', function () {
  * 其他退出
  */
 process.on('exit', (code) => {
-    Logger.info("app已停止:" + code)
+    Logger.info("app已退出:" + code)
 });
 /**
  * 其他错误
  */
 process.on('uncaughtException', (code) => {
-    Logger.info("app已停止:" + code)
+    Logger.info("app已停止:", code)
 });

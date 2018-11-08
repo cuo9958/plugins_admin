@@ -36,7 +36,7 @@ module.exports = {
      * @param {*} dir_path 
      * @param {*} fn 
      */
-    loadModel(dir_path, fn) {
+    loadModule(dir_path, fn) {
         Logger.info("加载指定路径js模块：" + dir_path);
         let file_list = []
         if (fs.existsSync(dir_path)) {
