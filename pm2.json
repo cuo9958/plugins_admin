@@ -1,0 +1,14 @@
+{
+    "apps": [{
+        "name": "plugin_@8010",
+        "script": "server/index.js",
+        "args": [],
+        "env_production": {
+            "NODE_ENV": "development"
+        },
+        "env": {
+            "NODE_ENV": "production",
+            "PORT": "8010"
+        }
+    }]
+}
