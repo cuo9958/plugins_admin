@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import './App.css';
 import { Layout, Button } from 'antd';
 import NProcess from "nprogress"
 
+/**
+ * 容器
+ */
 class App extends Component {
     render() {
         return <Layout id="app">
